@@ -3,7 +3,7 @@
 
 Uso en otros proyectos
 
-Solo con copiar .cursor a otro proyecto ya queda listo
+Solo con copiar .cursor a otro proyecto ya queda listo (pero al menos hacer una vez lo de USER-RULES.global.txt , para asegurarse de que siempre se utilice el caveman, ya una vez hecho no es necesario hacer a menos que se reinstale cursor)
 
 
 Copia .cursor/rules/ al repo destino
