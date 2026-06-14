@@ -1,0 +1,90 @@
+# Tutorial: pegar User Rules en Cursor (Windows)
+
+## Qué vas a pegar
+
+Abre `USER-RULES.global.txt` y copia **solo estas 4 líneas** (no copies las que empiezan con `#`):
+
+```
+Obey project `.cursor/rules/caveman.mdc` execution loop: Collapse → Act → Reply.
+Terse output. Execute first — no tool narration, no "Sure/Let me", no unasked summaries.
+Code/commits/reviews: see project caveman-*.mdc when relevant.
+Off only if user says "stop caveman" or "normal mode".
+```
+
+---
+
+## Paso a paso
+
+### 1. Abrir Cursor Settings
+
+Cualquiera de estas:
+
+- Atajo: `Ctrl + Shift + J`
+- Menú: **File → Preferences → Cursor Settings**
+- Icono engranaje abajo a la izquierda → **Cursor Settings**
+
+### 2. Ir a Rules
+
+En el panel izquierdo de Cursor Settings:
+
+1. Busca **Rules** (o **Rules & Memories**)
+2. Entra en **User Rules** — reglas globales, no del proyecto
+
+> **User Rules** = todos tus proyectos  
+> **Project Rules** = solo el repo (ahí van los `.mdc` de `.cursor/rules/`)
+
+### 3. Pegar el texto
+
+1. Si ya tienes reglas, ve al **final** del cuadro de texto
+2. Deja una línea en blanco
+3. Pega las 4 líneas de arriba
+4. Guarda — suele autoguardar; si hay botón **Save**, úsalo
+
+### 4. Comprobar
+
+1. Abre un proyecto con `.cursor/rules/` copiado
+2. Nuevo chat (`Ctrl + L` o panel Chat)
+3. Pide algo simple — respuesta debería ser directa, sin "Sure!" ni "Let me..."
+
+---
+
+## Si no encuentras "User Rules"
+
+Prueba:
+
+1. `Ctrl + Shift + P` → escribe **Cursor Settings**
+2. En la búsqueda del panel: **rules**
+3. O: **Settings** (`Ctrl + ,`) → busca **rules** → enlace a reglas de Cursor
+
+La UI cambia entre versiones; lo importante es **User Rules** global, no Project Rules.
+
+---
+
+## Qué NO hacer
+
+| Evitar | Por qué |
+|--------|---------|
+| Pegar en `settings.json` | User Rules no van ahí |
+| Copiar líneas con `#` | Son comentarios del archivo, no reglas |
+| Duplicar si ya pegaste antes | Mismas 4 líneas dos veces = ruido |
+| Sustituir Project Rules | User Rules refuerzan; `.mdc` del proyecto sigue siendo lo principal |
+
+---
+
+## Deshacer
+
+En **User Rules**, borra las 4 líneas caveman y guarda. Los `.mdc` del proyecto siguen funcionando solos.
+
+---
+
+## Resumen
+
+```
+USER-RULES.global.txt → 4 líneas sin #
+    ↓
+Cursor Settings → Rules → User Rules
+    ↓
+Pegar → guardar → nuevo chat para probar
+```
+
+Opcional. Sin esto, caveman funciona igual en proyectos donde copiaste `.cursor/rules/`.
