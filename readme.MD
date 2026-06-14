@@ -1,0 +1,1 @@
+Se agrega caveman, que tiene .cursorrules , el cual se pone en la raiz de cada proyecto y sirve para ahorrar tokens usando el método de caveman de github
